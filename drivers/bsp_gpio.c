@@ -2,14 +2,11 @@
 
 #include <stdlib.h>
 
-inline int8_t bsp_gpio_write_pin(bsp_gpio_t gpio, bool value) {
-  (void)gpio;
+#include "bsp_def.h"
 
-  if (value) {
-    if (!system("spd-say -r 100 -p 100 -R 100  滴")) {
-      return BSP_OK;
-    }
-  }
+inline bsp_status_t bsp_gpio_write_pin(bsp_gpio_t gpio, bool value) {
+  XB_UNUSED(gpio);
+  XB_UNUSED(value);
 
-  return BSP_ERR;
+  return BSP_OK;
 }

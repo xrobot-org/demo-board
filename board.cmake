@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.11)
 
-set(BOARD_NAME MiniPC)
-
 add_subdirectory(${BOARD_DIR}/drivers)
 
 add_executable(${PROJECT_NAME}.elf ${BOARD_DIR}/main.cpp)
